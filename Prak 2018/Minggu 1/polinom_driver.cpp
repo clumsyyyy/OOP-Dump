@@ -8,4 +8,6 @@ int main(){
     P.print();
     Polinom P1(P);
     P1.derive().print();
+    cout << P1.derive().substitute(2) << endl;
 }
+

@@ -19,7 +19,7 @@ A::~A(){
 }
 
 //assignment
-A &A::operator = (const A &other){
+A& A::operator = (const A& other){
     cout << "cassign " << data << " = " << other.data << endl;
     data = other.data;
     return *this;
