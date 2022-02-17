@@ -59,6 +59,7 @@ PQElmt PrioQueue::operator[](int k) {
     return {0, 0};
   }
 }
+
 PrioQueue operator+(const PrioQueue& a, const PrioQueue& b) {
     PrioQueue temp(a.maxEl + b.maxEl);
     int aCount = 0;

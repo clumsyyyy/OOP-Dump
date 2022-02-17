@@ -23,7 +23,7 @@ Bottle::Bottle(float height, float radius) : id(numOfBottle + 1){
     numOfBottle++;
 }
 
-Bottle::Bottle(const Bottle &bottle) : id(bottle.id){
+Bottle::Bottle(const Bottle& bottle) : id(bottle.id){
     this->height = bottle.height;
     this->radius = bottle.radius;
     this->waterHeight = bottle.waterHeight;

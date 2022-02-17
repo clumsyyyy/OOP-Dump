@@ -84,3 +84,8 @@ Stack Stack::operator+(const Stack& s) {
     Stack return_stack(Stack::capacity + s.capacity);
     return return_stack;
 }
+
+void Stack::ubah(){
+    this->size = 1;
+    this->data[0] = 9;
+}

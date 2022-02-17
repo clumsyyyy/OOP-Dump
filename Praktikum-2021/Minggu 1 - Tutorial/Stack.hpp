@@ -20,6 +20,7 @@ public:
     int top() const;        // melihat elemen teratas stack
     int getCapacity();
     static int getNumOfStack();
+    void ubah();
 
     friend int compareStackSize(const Stack& s1, const Stack& s2);
 
