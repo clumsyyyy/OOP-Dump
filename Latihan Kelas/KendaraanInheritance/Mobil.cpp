@@ -12,6 +12,10 @@ Mobil::Mobil(int nomor, int tahun, string merk, string supir) : Kendaraan(nomor,
     this->supir = supir;
 }
 
+Mobil::Mobil(const Mobil& a) : Kendaraan(a){
+    this->supir = a.supir;
+}
+
 void Mobil::printInfo(){
     Kendaraan::printInfo();
     cout << "Kategori: Mobil" << endl;

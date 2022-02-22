@@ -16,6 +16,12 @@ Kendaraan::Kendaraan(int nomor, int tahun, string merk){
     this->merk = merk;
 }
 
+Kendaraan::Kendaraan(const Kendaraan& a){
+    this->nomor = a.nomor;
+    this->tahun = a.tahun;
+    this->merk = a.merk;
+}
+
 //mencetak semua informasi yang dimiliki oleh kendaraan
 void Kendaraan::printInfo(){
     cout << "Nomor: " << this->nomor << endl;

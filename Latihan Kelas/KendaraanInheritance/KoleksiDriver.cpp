@@ -10,7 +10,7 @@ int main(){
     KoleksiKendaraan* k = new KoleksiKendaraan();
     Mobil* m1 = new Mobil(1, 2000, "Toyota", "Owen");
     m1->printInfo();
-    *k << *m1;
+    *k << m1;
     k->printAll();
 
     // KoleksiKendaraan k;

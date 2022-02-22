@@ -11,7 +11,8 @@ class Kendaraan{
     public:
         Kendaraan();
         Kendaraan(int nomor, int tahun, string merk);
-        void printInfo();
+        Kendaraan(const Kendaraan& a);
+        virtual void printInfo();
 };
 
 #endif

@@ -5,10 +5,10 @@ class KoleksiKendaraan {
     private:
         int nEff;
         int size;
-        Kendaraan* arr;
+        Kendaraan** arr;
     public:
-        KoleksiKendaraan(): nEff(0), size(100) {};
-        KoleksiKendaraan(int size): nEff(0), size(size), arr(new Kendaraan[size]) {};
+        KoleksiKendaraan(): nEff(0), size(100), arr(new Kendaraan*[size]) {};
+        KoleksiKendaraan(int size): nEff(0), size(size), arr(new Kendaraan*[size]) {};
         KoleksiKendaraan(const KoleksiKendaraan& k) {
             nEff = k.nEff;
             for (int i = 0; i < nEff; i++) {
@@ -21,12 +21,12 @@ class KoleksiKendaraan {
         
         void printAll() {
             for (int i = 0; i < nEff; i++) {
-                arr[i].printInfo();
+                arr[i]->printInfo();
                 cout << endl;
             }
         }
  
-        KoleksiKendaraan& operator<<(Kendaraan a) {
+        KoleksiKendaraan& operator<<(Kendaraan* a) {
             if (nEff + 1 < size){
                 arr[nEff] = a;
                 nEff++;
