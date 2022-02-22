@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Kendaraan.hpp"
+
 class KoleksiKendaraan {
     private:
         int nEff;
@@ -17,9 +18,11 @@ class KoleksiKendaraan {
         ~KoleksiKendaraan() {
             delete[] arr;
         }
+        
         void printAll() {
             for (int i = 0; i < nEff; i++) {
                 arr[i].printInfo();
+                cout << endl;
             }
         }
  
