@@ -8,8 +8,8 @@ class Hotel : public Property {
         int star;
     public:
         Hotel() : Property(){};
-        Hotel(string name, int year, string type, int star) : 
-            Property(name, year, type){ 
+        Hotel(string name, int year, int star) : 
+            Property(name, year, "hotel"){ 
                 this->star = star;
             };
 

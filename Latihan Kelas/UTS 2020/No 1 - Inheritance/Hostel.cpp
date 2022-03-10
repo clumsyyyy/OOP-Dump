@@ -8,8 +8,8 @@ class Hostel : public Property {
         int facility;
     public:
         Hostel() : Property(){};
-        Hostel(string name, int year, string type, int facility) : 
-            Property(name, year, type){ 
+        Hostel(string name, int year, int facility) : 
+            Property(name, year, "hostel"){ 
                 this->facility = facility;
             };
 

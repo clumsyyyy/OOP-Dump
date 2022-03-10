@@ -15,15 +15,15 @@ protected:
 public:
     Property();
     Property(string, int, string);
-    Property(const Property&p);
-    ~Property();
+    // Property(const Property&p);
+    // ~Property();
     void set_name(string);
-    const string get_name();
+    string get_name() const;
     void set_type(string);
-    const string get_type();
-    int get_age();
-    virtual void displayInfo();
-    float rate();
+    string get_type() const;
+    int get_age() const;
+    virtual void displayInfo() const;
+    float rate() const;
 // User-defined constructor: set nilai atribut berdasarkan nilai
 // parameter masukan
 // Default constructor: set nilai atribut sbb:

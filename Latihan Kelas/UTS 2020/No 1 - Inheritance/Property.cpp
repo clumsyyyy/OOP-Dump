@@ -18,23 +18,25 @@ Property::Property(string name, int openYear, string type){
     this->type = type;
 }
 
-// copy constructor
-Property::Property(const Property& p){
-    this->name = p.name;
-    this->openYear = p.openYear;
-    this->type = p.type;
-}
+// // copy constructor
+// Property::Property(const Property& p){
+//     this->name = p.name;
+//     this->openYear = p.openYear;
+//     this->type = p.type;
+// }
 
-// destructor
-Property::~Property(){
+// // destructor
+// Property::~Property(){
 
-}
+// }
+// class string sudah ada handler cctor dan dtor sehingga
+// gaperlu
 
 void Property::set_name(string name){
     this->name = name;
 }
 
-const string Property::get_name(){
+string Property::get_name() const{
     return this->name;
 }
 
@@ -42,21 +44,21 @@ void Property::set_type(string type){
     this->type = type;
 }
 
-const string Property::get_type(){
+string Property::get_type() const{
     return this->type;
 }
 
-int Property::get_age(){
+int Property::get_age() const{
     return CURRENT_YEAR - this->openYear;
 }
 
-void Property::displayInfo(){
+void Property::displayInfo() const{
     cout << "Nama: " << this->name << endl;
     cout << "Tipe: " << this->type << endl;
     cout << "Umur: " << this->get_age() << endl;
     cout << "Rate: " << this->rate() << endl;
 }
 
-float Property::rate(){
+float Property::rate() const{
     return this->get_age() * 50; //asumsinya gitu
 }

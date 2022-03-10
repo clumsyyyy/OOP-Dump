@@ -5,8 +5,8 @@
 using namespace std;
 
 int main(){
-    Hotel hilton = Hotel("Hotel Hilton", 1900, "hotel", 5);
-    Hostel vio = Hostel("Hostel Vio", 2003, "hostel", 40);
+    Hotel hilton = Hotel("Hotel Hilton", 1900, 5);
+    Hostel vio = Hostel("Hostel Vio", 2003, 40);
     hilton.displayInfo(); 
     cout << endl;
     vio.displayInfo(); 
