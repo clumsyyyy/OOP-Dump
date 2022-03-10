@@ -1,0 +1,26 @@
+
+#include "Property.h"
+#include <iostream>
+using namespace std;
+
+class Hotel : public Property {
+    private:
+        int star;
+    public:
+        Hotel() : Property(){};
+        Hotel(string name, int year, string type, int star) : 
+            Property(name, year, type){ 
+                this->star = star;
+            };
+
+        void displayInfo(){
+            Property::displayInfo();
+            cout << "Bintang: " << this->star << endl;
+        }
+        void set_star(int star){
+            this->star = star;
+        }
+        int get_star(){
+            return this->star;
+        }
+};
