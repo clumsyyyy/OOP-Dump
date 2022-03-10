@@ -1,5 +1,5 @@
-#include "Queue.cpp"
-#include "Prioqueue.cpp"
+#include "Queue.hpp"
+#include "Prioqueue.hpp"
 #include <iostream>
 using namespace std;
 

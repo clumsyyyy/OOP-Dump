@@ -1,5 +1,7 @@
+#ifndef PRIOQUEUE_HPP
+#define PRIOQUEUE_HPP
 #include <iostream>
-#include "Queue.h"
+#include "Queue.hpp"
 using namespace std;
 
 template <class T>
@@ -16,7 +18,7 @@ class Prioqueue : public Queue<T> {
             delete[] this->prio;
         }
 
-        void enqueue(T elmt, int p){
+        void enqueue(const T& elmt, int p){
             if (this->size == 10){
                 throw "Maximum size exceeded";
             } else {
@@ -71,3 +73,4 @@ class Prioqueue : public Queue<T> {
         //     return os;
         // }
 };
+#endif
