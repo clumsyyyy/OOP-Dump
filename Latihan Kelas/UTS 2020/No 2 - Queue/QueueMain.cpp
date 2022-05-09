@@ -4,12 +4,13 @@
 using namespace std;
 
 int main(){
-    Prioqueue<int> q;
-    int res;
-    q.enqueue(8, 1);
-    q.enqueue(6, 2);
-    q.enqueue(4, 1);
+    Prioqueue<float> q;
+    float res;
+    q.enqueue(7.9, 1);
+    q.enqueue(6.0, 2);
+    q.enqueue(4.0, 1);
     q.dequeue(res);
-    q.enqueue(2, 3);
+    q.enqueue(2.0, 3);
     q.dequeue(res);
+    cout << q;
 }

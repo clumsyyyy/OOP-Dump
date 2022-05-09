@@ -13,7 +13,7 @@ class Hotel : public Property {
                 this->star = star;
             };
 
-        void displayInfo(){
+        void displayInfo() const{
             Property::displayInfo();
             cout << "Bintang: " << this->star << endl;
         }

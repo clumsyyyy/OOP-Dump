@@ -13,7 +13,7 @@ class Hostel : public Property {
                 this->facility = facility;
             };
 
-        void displayInfo(){
+        void displayInfo() const{
             Property::displayInfo();
             cout << "Fasilitas: " << this->facility << endl;
         }

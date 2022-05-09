@@ -13,7 +13,7 @@ class Queue{
         //default constructor
         Queue(){
             this->size = 0;
-            this->buffer = new int[this->size];
+            this->buffer = new T[this->size];
         }
 
 
@@ -56,6 +56,19 @@ class Queue{
         // T& getBuf(int idx){
         //     return this->buffer[idx];
         // }
+
+        friend std::ostream& operator<<(ostream& os, Queue<T> q){
+            os << "<";
+            for (int i = 0; i < q.size; i++){
+                os << q.buffer[i];
+                if (i != q.size - 1){
+                    os << ",";
+                }
+            }
+            os << ">\n";
+            return os;
+        }
+
 
 };
 

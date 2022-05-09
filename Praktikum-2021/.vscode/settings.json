@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.pl": "prolog",
+        "new": "cpp",
+        "random": "cpp"
+    },
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.dependency.packagePresentation": "hierarchical"
+}

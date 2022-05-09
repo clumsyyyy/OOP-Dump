@@ -1,4 +1,4 @@
-.vscode 
-*.zip
-*.exe
-tempCodeRunnerFile.cpp
+/.vscode 
+/*.zip
+/*.exe
+/tempCodeRunnerFile.cpp

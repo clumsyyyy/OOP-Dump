@@ -57,7 +57,6 @@ class Prioqueue : public Queue<T> {
             }
         }
         void print(){
-            Queue<T>::print();
             for (int i = 0; i < this->size; i++){
                 cout << this->prio[i] << " ";
             }
