@@ -1,4 +1,10 @@
+package properties;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import facilities.Facility;
 
 public class Property{
     private String id;
@@ -31,9 +37,23 @@ public class Property{
         this.price = new_price;
     }
 
-    public void addFacility(Facility fac){
-        this.facilities.add(fac);
-        this.daily_price += fac.getPrice();
+    public void addFacility(String facname, int price){
+        // this.facilities.add(fac);
+        // this.daily_price += fac.getPrice();
+        File f = new File("facilities");
+        List<String> names = Arrays.asList(f.list());
+        for (String name : names){
+            if (name.equals(facname)){
+                try{
+                    Facility fac = (Facility)(Class.forName("facilities." + facname).newInstance());
+                    fac.setPrice(price);
+                    this.daily_price += price;
+                    this.facilities.add(fac);
+                } catch (Exception e){
+                    System.out.println("Error: " + e.getMessage());
+                }
+            }
+        }
     }
 
     @Override

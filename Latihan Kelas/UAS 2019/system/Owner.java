@@ -1,4 +1,8 @@
+package system;
 import java.util.ArrayList;
+
+import properties.Property;
+import properties.RegisteredProperty;
 
 public class Owner {
     private String owner_name;

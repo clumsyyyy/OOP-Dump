@@ -1,5 +1,10 @@
+package facilities;
 public class Pool implements Facility {
     public Pool(){
+
+    }
+
+    public void setPrice(int price){
 
     }
 

@@ -1,3 +1,4 @@
+package properties;
 public class Hotel extends Property{
     private String type;
 

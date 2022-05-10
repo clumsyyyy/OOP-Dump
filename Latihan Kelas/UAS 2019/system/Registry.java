@@ -1,4 +1,7 @@
+package system;
 import java.util.ArrayList;
+
+import properties.RegisteredProperty;
 
 public class Registry{
     private static Registry reg = null;

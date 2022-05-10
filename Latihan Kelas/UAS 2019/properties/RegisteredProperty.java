@@ -1,3 +1,4 @@
+package properties;
 public class RegisteredProperty {
     private Property prop;
     private String date;

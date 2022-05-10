@@ -1,3 +1,4 @@
+package properties;
 public class Apartment extends Property{
     private int rooms;
 

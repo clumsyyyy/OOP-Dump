@@ -1,3 +1,6 @@
+import properties.*;
+import system.*;
+
 public class Main {
     public static void main(String[] args){
         Owner owner1 = new Owner("Owner 1");
@@ -8,8 +11,8 @@ public class Main {
                 400000,
                 "Standard");
 
-            std.addFacility(new Breakfast(80000));
-            std.addFacility(new Pool());
+            std.addFacility("Breakfast", 80000);
+            std.addFacility("Pool", 0);
             owner1.addProperty(std, "2020-04-29");
         }
 
@@ -19,8 +22,8 @@ public class Main {
                 "Deluxe Hotel " + i,
                 600000,
                 "Deluxe Hotel");
-            dlx.addFacility(new Breakfast(80000));
-            dlx.addFacility(new Pool());
+            dlx.addFacility("Breakfast", 80000);
+            dlx.addFacility("Pool", 0);
             owner1.addProperty(dlx, "2020-04-29");
         }
 
@@ -32,7 +35,7 @@ public class Main {
                 700000,
                 2);
 
-            apt.addFacility(new Breakfast(60000));
+            apt.addFacility("Breakfast", 60000);
             owner2.addProperty(apt, "2020-04-29");
         }
 
