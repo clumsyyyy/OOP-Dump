@@ -49,6 +49,7 @@ public class Main {
 
         User user1 = new User("user1", "user1@gmail.com", "696969696969");
         User user2 = new User("user2", "user2@gmail.com", "420420420420");
+       
         owner1.register();
         owner2.register();
         user1.register();

@@ -37,20 +37,20 @@ public class Property{
         this.price = new_price;
     }
 
-    public void addFacility(String facname, int price){
+    public void addFacility(String facname, int facprice){
         // this.facilities.add(fac);
         // this.daily_price += fac.getPrice();
         File f = new File("facilities");
         List<String> names = Arrays.asList(f.list());
         for (String name : names){
-            if (name.equals(facname)){
+            if (name.equals(facname + ".java")){
                 try{
                     Facility fac = (Facility)(Class.forName("facilities." + facname).newInstance());
-                    fac.setPrice(price);
-                    this.daily_price += price;
+                    fac.setPrice(facprice);
+                    this.daily_price += facprice;
                     this.facilities.add(fac);
                 } catch (Exception e){
-                    System.out.println("Error: " + e.getMessage());
+                    System.out.println(e);
                 }
             }
         }
