@@ -1,23 +1,14 @@
-import java.util.ArrayList;
 
-public class Panel implements Component {
-    private String name;
-    private ArrayList<Component> components;
+
+public class Panel extends Component {
 
     public Panel(String name){
-        this.name = name;
-        this.components = new ArrayList<Component>();
-    }
-
-    public void addComponent(Component c){
-        this.components.add(c);
+        super(name);
     }
 
     public void draw(){
         System.out.println("Drawing Panel " + this.name);
-        for (Component c : components){
-            c.draw();
-        }
+        super.draw();
         System.out.println();
     }
 }

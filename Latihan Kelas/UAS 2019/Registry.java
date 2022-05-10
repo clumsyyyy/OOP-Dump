@@ -5,7 +5,7 @@ public class Registry{
     private ArrayList<Owner> owners;
     private ArrayList<User> users;
 
-    public Registry(){
+    private Registry(){
         this.owners = new ArrayList<Owner>();
         this.users = new ArrayList<User>();
     }
@@ -48,7 +48,7 @@ public class Registry{
                 if (rp.getDate().equals(date) && rp.getProp().getID().equals(prop_id) && !rp.isBooked()){
                     rp.toggleBooked();
                     o.addUser(user);
-                    System.out.println("Reservasi a.n. \n" + user + "\nberhasil! \n" + rp.getProp());
+                    System.out.println("Reservasi berhasil! \n" + rp.getProp());
                     found = true;
                 }
             }

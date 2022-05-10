@@ -1,7 +1,8 @@
-public class Text implements Component{
+public class Text extends Component{
     private String caption;
 
-    public Text(String caption){
+    public Text(String name, String caption){
+        super(name);
         this.caption = caption;
     }
     public void draw(){

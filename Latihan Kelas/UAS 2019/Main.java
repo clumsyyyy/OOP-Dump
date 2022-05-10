@@ -2,11 +2,11 @@ public class Main {
     public static void main(String[] args){
         Owner owner1 = new Owner("Owner 1");
         for (int i = 1; i <= 10; i++){
-            Property std = new Property(
+            Hotel std = new Hotel(
                 "1-STD-" + i,
                 "Standard Hotel " + i,
                 400000,
-                PropType.STANDARD);
+                "Standard");
 
             std.addFacility(new Breakfast(80000));
             std.addFacility(new Pool());
@@ -14,11 +14,11 @@ public class Main {
         }
 
         for (int i = 1; i <= 3; i++){
-            Property dlx = new Property(
+            Hotel dlx = new Hotel(
                 "1-DLX-" + i ,
                 "Deluxe Hotel " + i,
                 600000,
-                PropType.DELUXE);
+                "Deluxe Hotel");
             dlx.addFacility(new Breakfast(80000));
             dlx.addFacility(new Pool());
             owner1.addProperty(dlx, "2020-04-29");
@@ -26,22 +26,21 @@ public class Main {
 
         Owner owner2 = new Owner("Owner 2");
         for (int i = 1; i <= 3; i++){
-            Property apt = new Property(
+            Apartment apt = new Apartment(
                 "2-APT-" + i,
                 "Apartment" + i,
                 700000,
-                PropType.APARTMENT);
+                2);
 
             apt.addFacility(new Breakfast(60000));
             owner2.addProperty(apt, "2020-04-29");
         }
 
         for (int i = 1; i <= 5; i++){
-            Property hms = new Property(
+            Homestay hms = new Homestay(
                 "2-HMS-" + i,
                 "Homestay " + i,
-                500000,
-                PropType.HOMESTAY);
+                500000);
             owner2.addProperty(hms, "2020-04-29");
         }
 

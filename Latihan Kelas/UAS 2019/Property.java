@@ -5,15 +5,13 @@ public class Property{
     private String name;
     private int price;
     private int daily_price;
-    private PropType type;
     private ArrayList <Facility> facilities;
 
-    public Property(String id, String name, int price, PropType type){
+    public Property(String id, String name, int price){
         this.id = id;
         this.name = name;
         this.price = price;
         this.daily_price = price;
-        this.type = type;
         this.facilities = new ArrayList<Facility>();
     }
 
@@ -41,7 +39,6 @@ public class Property{
     @Override
     public String toString(){
         String desc = this.id + " - " + this.name 
-        + "\nType: " + this.type.name() 
         + "\nPrice: " + this.price;
         if (this.facilities.size() > 0)
             desc += "\nFacilities: ";
